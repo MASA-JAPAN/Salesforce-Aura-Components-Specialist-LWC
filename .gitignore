@@ -1,0 +1,6 @@
+.forcecode
+.sfdx
+force.json
+sfdx-project.json
+.vscode
+src/aura

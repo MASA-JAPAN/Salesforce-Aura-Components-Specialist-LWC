@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/boarSearchForm": [
+                "boarSearchForm/boarSearchForm.js"
+            ],
+            "c/bortSearchResults": [
+                "bortSearchResults/bortSearchResults.js"
+            ],
+            "c/bortTile": [
+                "bortTile/bortTile.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
