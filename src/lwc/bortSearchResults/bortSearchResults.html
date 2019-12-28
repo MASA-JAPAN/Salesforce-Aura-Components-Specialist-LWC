@@ -1,3 +1,15 @@
 <template>
-
+    <lightning:layout >
+        <template for:each={borts} for:item="bort">
+            <lightning:layoutItem key = {bort.Id}>
+                <p>{bort.Name}</p>
+                <c-bort-tile searched-bort={bort}></c-bort-tile>
+            </lightning:layoutItem>
+        </template>
+    </lightning:layout>
+    <div if:false={borts}>
+        <lightning:layoutItem class="slds-align_absolute-center" >
+            <ui:outputText >No boats found</ui:outputText>
+        </lightning:layoutItem>
+    </div>
 </template>

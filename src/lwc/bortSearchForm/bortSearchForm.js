@@ -11,14 +11,17 @@ import FIELD_Geolocation__c from "@salesforce/schema/Boat__c.Geolocation__c";
 import FIELD_Description__c from "@salesforce/schema/Boat__c.Description__c";
 import FIELD_BoatType__c from "@salesforce/schema/Boat__c.BoatType__c";
 import FIELD_Contact__c from "@salesforce/schema/Boat__c.Contact__c";
+import getBoats from "@salesforce/apex/BoatSearchFormController.getBoats";
 
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
-export default class BoarSearchForm extends LightningElement {
+export default class BortSearchForm extends LightningElement {
   @api horizontalAlign = "center";
   @track bortTypes;
   @track error;
   @track isShowModal = false;
+  @track selectedType = "";
+  @track searchedBorts;
 
   createFields = [
     FIELD_Name,
@@ -65,5 +68,26 @@ export default class BoarSearchForm extends LightningElement {
       mode: mode
     });
     this.dispatchEvent(event);
+  }
+
+  handleChange(e) {
+    this.selectedType = e.target.value;
+    console.log(this.selectedType);
+  }
+
+  handleSearch(e) {
+    getBoats({ boatTypeId: this.selectedType })
+      .then(result => {
+        this.searchedBorts = result;
+        console.log(result);
+      })
+      .catch(error => {
+        this.error = error;
+        console.log(error);
+      });
+    e.preventDefault();
+    this.dispatchEvent(
+      new CustomEvent("searched", { detail: this.searchedBorts })
+    );
   }
 }

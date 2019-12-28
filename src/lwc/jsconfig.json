@@ -2,14 +2,35 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "c/boarSearchForm": [
-                "boarSearchForm/boarSearchForm.js"
+            "c/bortDetail": [
+                "bortDetail/bortDetail.js"
             ],
             "c/bortSearchResults": [
                 "bortSearchResults/bortSearchResults.js"
             ],
             "c/bortTile": [
                 "bortTile/bortTile.js"
+            ],
+            "c/data": [
+                "data/data.js"
+            ],
+            "c/detail": [
+                "detail/detail.js"
+            ],
+            "c/list": [
+                "list/list.js"
+            ],
+            "c/selector": [
+                "selector/selector.js"
+            ],
+            "c/tile": [
+                "tile/tile.js"
+            ],
+            "c/bortSearch": [
+                "bortSearch/bortSearch.js"
+            ],
+            "c/bortSearchForm": [
+                "bortSearchForm/bortSearchForm.js"
             ]
         },
         "experimentalDecorators": true

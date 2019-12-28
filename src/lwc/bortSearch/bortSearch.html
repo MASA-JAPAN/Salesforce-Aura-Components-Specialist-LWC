@@ -1,0 +1,12 @@
+<template>
+    <lightning:card title="Find a Boat" class="slds-m-bottom_50px">
+        <p class="slds-p-horizontal--small">
+            <c-bort-search-form onsearched = {handleSearched}></c-bort-search-form>
+        </p>
+    </lightning:card>
+    <lightning:card title="Matching Boats">
+        <p class="slds-p-horizontal--small">
+            <c-bort-search-results searched-borts={searchedBorts}></c-bort-search-results>
+        </p>
+</lightning:card>
+</template>
