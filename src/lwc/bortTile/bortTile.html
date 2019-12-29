@@ -1,8 +1,8 @@
 <template>
-    <div class="tile">
-        <label>
-            <input type="radio" name="bort" class="radio" >
-            <div style= {backgroundStyle} class="innertile">
+    <div class="tile" >
+        <label >
+            <input type="radio" name="bort" class="radio" onchange={handleSelect}>
+            <div style= {backgroundStyle} class="innertile" >
                 <div class="lower-third">
                     <h1 class="slds-truncate">{bortContactName}</h1>
                 </div>

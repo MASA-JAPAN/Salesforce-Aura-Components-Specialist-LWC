@@ -31,6 +31,12 @@
             ],
             "c/tile": [
                 "tile/tile.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/boatMap": [
+                "boatMap/boatMap.js"
             ]
         },
         "experimentalDecorators": true

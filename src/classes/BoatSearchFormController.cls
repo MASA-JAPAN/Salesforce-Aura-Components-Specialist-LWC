@@ -5,7 +5,7 @@ public with sharing class BoatSearchFormController {
     }
     @AuraEnabled
     public static List<Boat__c> getBoats(String boatTypeId) {
-        String sql = 'SELECT id, BoatType__c,Picture__c, name,Contact__r.Name, ';
+        String sql = 'SELECT id, BoatType__c, BoatType__r.Name,Picture__c, Length__c, Price__c,name,Contact__r.Name, ';
                sql += ' Geolocation__Latitude__s, Geolocation__Longitude__s ';
                sql += ' FROM Boat__c ';
         if( !String.isBlank(boatTypeId)) {

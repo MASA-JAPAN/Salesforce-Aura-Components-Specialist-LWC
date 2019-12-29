@@ -1,11 +1,15 @@
 /* eslint-disable no-console */
-import { LightningElement, track, api } from "lwc";
+import { LightningElement, track, api, wire } from "lwc";
+import { fireEvent } from "c/pubsub";
+import { CurrentPageReference } from "lightning/navigation";
 
 export default class BortTile extends LightningElement {
   @track bort;
   @track bortId = "";
   @track bortContactName = "";
   @track bortPicture = "";
+
+  @wire(CurrentPageReference) pageRef;
 
   @api
   set searchedBort(value) {
@@ -23,8 +27,10 @@ export default class BortTile extends LightningElement {
     return `background-image:url(${this.bortPicture})`;
   }
 
-  handleClick(e) {
+  handleSelect(e) {
     e.preventDefault();
     this.dispatchEvent(new CustomEvent("selected", { detail: this.bort.Id }));
+    fireEvent(this.pageRef, "selectedBoat", this.bort);
+    console.log(this.bort);
   }
 }
