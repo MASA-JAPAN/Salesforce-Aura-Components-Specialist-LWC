@@ -5,6 +5,12 @@
             "c/bortDetail": [
                 "bortDetail/bortDetail.js"
             ],
+            "c/bortSearch": [
+                "bortSearch/bortSearch.js"
+            ],
+            "c/bortSearchForm": [
+                "bortSearchForm/bortSearchForm.js"
+            ],
             "c/bortSearchResults": [
                 "bortSearchResults/bortSearchResults.js"
             ],
@@ -25,12 +31,6 @@
             ],
             "c/tile": [
                 "tile/tile.js"
-            ],
-            "c/bortSearch": [
-                "bortSearch/bortSearch.js"
-            ],
-            "c/bortSearchForm": [
-                "bortSearchForm/bortSearchForm.js"
             ]
         },
         "experimentalDecorators": true

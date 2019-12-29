@@ -1,8 +1,8 @@
 <template>
-    <lightning:button  class="tile">
+    <lightning:button  class="tile" onclick={handleClick} tabindex="-1">
         <div style= {backgroundStyle} class="innertile">
             <div class="lower-third">
-                <h1 class="slds-truncate"></h1>
+                <h1 class="slds-truncate">{bortContactName}</h1>
             </div>
         </div>
     </lightning:button>
