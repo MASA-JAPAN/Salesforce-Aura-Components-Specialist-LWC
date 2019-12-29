@@ -1,10 +1,13 @@
 <template>
-    <lightning:button  class="tile" onclick={handleClick} tabindex="-1">
-        <div style= {backgroundStyle} class="innertile">
-            <div class="lower-third">
-                <h1 class="slds-truncate">{bortContactName}</h1>
+    <div class="tile">
+        <label>
+            <input type="radio" name="bort" class="radio" >
+            <div style= {backgroundStyle} class="innertile">
+                <div class="lower-third">
+                    <h1 class="slds-truncate">{bortContactName}</h1>
+                </div>
             </div>
-        </div>
-    </lightning:button>
+        </label>
+    </div>
 
 </template>
