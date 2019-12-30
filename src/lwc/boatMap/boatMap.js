@@ -20,11 +20,7 @@ export default class BoatMap extends LightningElement {
         location: {
           Latitude: boat.Geolocation__Latitude__s,
           Longitude: boat.Geolocation__Longitude__s
-        },
-
-        title: "The White House",
-        description:
-          "Landmark, historic home & office of the United States president, with tours for visitors."
+        }
       }
     ];
   }

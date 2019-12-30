@@ -3,7 +3,7 @@ import { LightningElement, track, wire } from "lwc";
 import { registerListener } from "c/pubsub";
 import { CurrentPageReference, NavigationMixin } from "lightning/navigation";
 
-export default class BortDetail extends NavigationMixin(LightningElement) {
+export default class BoatDetail extends NavigationMixin(LightningElement) {
   @wire(CurrentPageReference) pageRef;
   @track boatId = null;
   @track boatName = null;
@@ -11,10 +11,10 @@ export default class BortDetail extends NavigationMixin(LightningElement) {
   @track boatLength = null;
   @track boatPrice = null;
   @track boatDescription = null;
-  @track bortPicture = null;
+  @track boatPicture = null;
 
   get backgroundImage() {
-    return `background-image:url(${this.bortPicture})`;
+    return `background-image:url(${this.boatPicture})`;
   }
 
   connectedCallback() {
@@ -29,7 +29,7 @@ export default class BortDetail extends NavigationMixin(LightningElement) {
     this.boatLength = boat.Length__c;
     this.boatPrice = boat.Price__c;
     this.boatDescription = boat.Description__c;
-    this.bortPicture = boat.Picture__c;
+    this.boatPicture = boat.Picture__c;
   }
   handleClick() {
     console.log("a");

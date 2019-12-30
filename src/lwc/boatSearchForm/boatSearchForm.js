@@ -15,9 +15,9 @@ import getBoats from "@salesforce/apex/BoatSearchFormController.getBoats";
 
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
-export default class BortSearchForm extends LightningElement {
+export default class BoatSearchForm extends LightningElement {
   @api horizontalAlign = "center";
-  @track bortTypes;
+  @track boatTypes;
   @track error;
   @track isShowModal = false;
   @track selectedType = "";
@@ -37,12 +37,12 @@ export default class BortSearchForm extends LightningElement {
   @wire(getBoatTypes)
   wiredContacts({ error, data }) {
     if (data) {
-      this.bortTypes = data;
+      this.boatTypes = data;
       this.error = undefined;
-      console.log("this.bortTypes[0]" + this.bortTypes[0].Id);
+      console.log("this.boatTypes[0]" + this.boatTypes[0].Id);
     } else if (error) {
       this.error = error;
-      this.bortTypes = undefined;
+      this.boatTypes = undefined;
     }
   }
 
@@ -53,8 +53,8 @@ export default class BortSearchForm extends LightningElement {
     this.isShowModal = false;
   }
   onSuccess(event) {
-    const bort = event.detail;
-    console.log(JSON.stringify(bort));
+    const boat = event.detail;
+    console.log(JSON.stringify(boat));
     this.isShowModal = false;
     this.showToast("SUCCESS", "Success", "success", "pester");
   }

@@ -1,9 +1,9 @@
 <template>
     <div if:true={foundBoats} >
         <lightning-layout>
-            <template for:each={borts} for:item="bort">
-                <lightning-layout-item key = {bort.Id} flexibility="auto" class="slds-p-horizontal_xx-small">
-                    <c-bort-tile searched-bort={bort} ></c-bort-tile>
+            <template for:each={boats} for:item="boat">
+                <lightning-layout-item key = {boat.Id} flexibility="auto" class="slds-p-horizontal_xx-small">
+                    <c-boat-tile searched-boat={boat} ></c-boat-tile>
                 </lightning-layout-item>
             </template>
         </lightning-layout>

@@ -1,45 +1,30 @@
 {
     "compilerOptions": {
+        "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/boatDetail": [
+                "boatDetail/boatDetail.js"
+            ],
             "c/boatMap": [
                 "boatMap/boatMap.js"
             ],
-            "c/bortDetail": [
-                "bortDetail/bortDetail.js"
+            "c/boatSearch": [
+                "boatSearch/boatSearch.js"
             ],
-            "c/bortSearch": [
-                "bortSearch/bortSearch.js"
+            "c/boatSearchForm": [
+                "boatSearchForm/boatSearchForm.js"
             ],
-            "c/bortSearchForm": [
-                "bortSearchForm/bortSearchForm.js"
+            "c/boatSearchResults": [
+                "boatSearchResults/boatSearchResults.js"
             ],
-            "c/bortSearchResults": [
-                "bortSearchResults/bortSearchResults.js"
-            ],
-            "c/bortTile": [
-                "bortTile/bortTile.js"
-            ],
-            "c/data": [
-                "data/data.js"
-            ],
-            "c/detail": [
-                "detail/detail.js"
-            ],
-            "c/list": [
-                "list/list.js"
+            "c/boatTile": [
+                "boatTile/boatTile.js"
             ],
             "c/pubsub": [
                 "pubsub/pubsub.js"
-            ],
-            "c/selector": [
-                "selector/selector.js"
-            ],
-            "c/tile": [
-                "tile/tile.js"
             ]
-        },
-        "experimentalDecorators": true
+        }
     },
     "include": [
         "**/*",

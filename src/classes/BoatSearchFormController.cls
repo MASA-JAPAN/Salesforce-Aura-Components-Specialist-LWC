@@ -11,9 +11,7 @@ public with sharing class BoatSearchFormController {
         if( !String.isBlank(boatTypeId)) {
             sql += ' where BoatType__c = \''+ boatTypeId +'\'';
         }
-        System.debug('sql: ' + sql);
         List<Boat__c> boatList = Database.query(sql);
-        System.debug('boatList: ' + boatList);
         return boatList;        
     }
 }

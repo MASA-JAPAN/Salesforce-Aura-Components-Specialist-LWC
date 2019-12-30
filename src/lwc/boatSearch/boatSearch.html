@@ -2,14 +2,14 @@
     <div class="slds-m-bottom_x-small">
         <lightning-card title="Find a Boat" >
             <p class="slds-p-horizontal--small">
-                <c-bort-search-form onsearched = {handleSearched}></c-bort-search-form>
+                <c-boat-search-form onsearched = {handleSearched}></c-boat-search-form>
             </p>
         </lightning-card>
     </div>
     <div>
         <lightning-card title="Matching Boats">
             <p class="slds-p-horizontal--small">
-                <c-bort-search-results searched-borts={searchedBorts}></c-bort-search-results>
+                <c-boat-search-results searched-boats={searchedBoats}></c-boat-search-results>
             </p>
         </lightning-card>
     </div>
