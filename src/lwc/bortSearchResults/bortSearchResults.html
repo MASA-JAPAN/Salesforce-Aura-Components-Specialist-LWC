@@ -1,14 +1,14 @@
 <template>
-    <div if:true={borts} class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+    <div if:true={foundBoats} >
         <lightning-layout>
             <template for:each={borts} for:item="bort">
-                <lightning-layout-item key = {bort.Id} flexibility="auto" >
+                <lightning-layout-item key = {bort.Id} flexibility="auto" class="slds-p-horizontal_xx-small">
                     <c-bort-tile searched-bort={bort} ></c-bort-tile>
                 </lightning-layout-item>
             </template>
         </lightning-layout>
     </div>
-    <div if:false={borts}>
+    <div if:false={foundBoats}>
         <lightning-layout-item class="slds-align_absolute-center" >
             <ui:outputText >No boats found</ui:outputText>
         </lightning-layout-item>

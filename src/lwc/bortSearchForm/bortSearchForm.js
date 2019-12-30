@@ -21,7 +21,6 @@ export default class BortSearchForm extends LightningElement {
   @track error;
   @track isShowModal = false;
   @track selectedType = "";
-  @track searchedBorts;
 
   createFields = [
     FIELD_Name,
@@ -78,16 +77,12 @@ export default class BortSearchForm extends LightningElement {
   handleSearch(e) {
     getBoats({ boatTypeId: this.selectedType })
       .then(result => {
-        this.searchedBorts = result;
-        console.log(result);
+        e.preventDefault();
+        this.dispatchEvent(new CustomEvent("searched", { detail: result }));
       })
       .catch(error => {
         this.error = error;
         console.log(error);
       });
-    e.preventDefault();
-    this.dispatchEvent(
-      new CustomEvent("searched", { detail: this.searchedBorts })
-    );
   }
 }

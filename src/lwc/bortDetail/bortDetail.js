@@ -1,17 +1,17 @@
 /* eslint-disable no-console */
 import { LightningElement, track, wire } from "lwc";
-import { registerListener, unregisterAllListeners } from "c/pubsub";
+import { registerListener } from "c/pubsub";
 import { CurrentPageReference, NavigationMixin } from "lightning/navigation";
 
 export default class BortDetail extends NavigationMixin(LightningElement) {
   @wire(CurrentPageReference) pageRef;
-  @track boatId = "";
-  @track boatName = "test";
-  @track boatTypeName = "test";
-  @track boatLength = 5;
-  @track boatPrice = 5;
-  @track boatDescription = "test";
-  @track bortPicture = "";
+  @track boatId = null;
+  @track boatName = null;
+  @track boatTypeName = null;
+  @track boatLength = null;
+  @track boatPrice = null;
+  @track boatDescription = null;
+  @track bortPicture = null;
 
   get backgroundImage() {
     return `background-image:url(${this.bortPicture})`;

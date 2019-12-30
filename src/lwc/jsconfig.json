@@ -2,6 +2,9 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "c/boatMap": [
+                "boatMap/boatMap.js"
+            ],
             "c/bortDetail": [
                 "bortDetail/bortDetail.js"
             ],
@@ -26,17 +29,14 @@
             "c/list": [
                 "list/list.js"
             ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
             "c/selector": [
                 "selector/selector.js"
             ],
             "c/tile": [
                 "tile/tile.js"
-            ],
-            "c/pubsub": [
-                "pubsub/pubsub.js"
-            ],
-            "c/boatMap": [
-                "boatMap/boatMap.js"
             ]
         },
         "experimentalDecorators": true

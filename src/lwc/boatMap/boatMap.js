@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 import { LightningElement, track, wire } from "lwc";
-import { registerListener, unregisterAllListeners } from "c/pubsub";
+import { registerListener } from "c/pubsub";
 import { CurrentPageReference } from "lightning/navigation";
 
 export default class BoatMap extends LightningElement {
   @wire(CurrentPageReference) pageRef;
   @track boatLatitude = 25.0831569;
   @track boatLongitude = -77.3248236;
-  @track mapMarkers = [];
+  @track mapMarkers = null;
 
   connectedCallback() {
     // subscribe to searchKeyChange event
