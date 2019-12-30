@@ -5,8 +5,8 @@ import { CurrentPageReference } from "lightning/navigation";
 
 export default class BoatMap extends LightningElement {
   @wire(CurrentPageReference) pageRef;
-  @track boatLatitude = 25.0831569;
-  @track boatLongitude = -77.3248236;
+  @track boatLatitude = null;
+  @track boatLongitude = null;
   @track mapMarkers = null;
 
   connectedCallback() {
